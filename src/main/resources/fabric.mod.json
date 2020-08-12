@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "cs",
+  "version": "${version}",
+
+  "name": "Gamemode Mod",
+  "description": "Change your gamemode",
+  "authors": [
+    "Cjsah"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Cjsah/",
+    "sources": "https://github.com/Cjsah/gamemode"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/Cs/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.cjsah.CsMod"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
