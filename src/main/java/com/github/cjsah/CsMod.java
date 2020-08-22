@@ -6,15 +6,12 @@ import net.fabricmc.fabric.api.registry.CommandRegistry;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.world.GameMode;
 import net.minecraft.server.network.ServerPlayerEntity;
-
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.server.command.ServerCommandSource;
 
 
 public class CsMod implements ModInitializer {
-
-
 	@Override
 	public void onInitialize() {
 		CommandRegistry.INSTANCE.register(false, (dispatcher) -> dispatcher.register(
@@ -34,7 +31,6 @@ public class CsMod implements ModInitializer {
 		));
 
 	}
-
 
 	private static void changeMode(CommandContext<ServerCommandSource> context, GameMode mode) {
 		ServerPlayerEntity player;
