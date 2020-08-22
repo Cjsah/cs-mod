@@ -17,12 +17,8 @@ public class CsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
 		CommandRegistry.INSTANCE.register(false, (dispatcher) -> dispatcher.register(
-				CommandManager.literal("c").requires(source -> source.hasPermissionLevel(1))
+				CommandManager.literal("c").requires(source -> source.hasPermissionLevel(2))
 						.executes(c -> {
 							changeMode(c, GameMode.SPECTATOR);
 							return Command.SINGLE_SUCCESS;
@@ -37,21 +33,16 @@ public class CsMod implements ModInitializer {
 						})
 		));
 
-
 	}
 
 
-	private static int changeMode(CommandContext<ServerCommandSource> context, GameMode mode) {
+	private static void changeMode(CommandContext<ServerCommandSource> context, GameMode mode) {
 		ServerPlayerEntity player;
 		try {
 			player = context.getSource().getPlayer();
 			if (player.interactionManager.getGameMode() != mode) {
 				player.setGameMode(mode);
 			}
-		} catch (CommandSyntaxException ignore) {
-			return 0;
-		}
-		return 1;
+		} catch (CommandSyntaxException ignore) {}
 	}
-
 }
