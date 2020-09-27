@@ -1,7 +1,7 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "com.github.cjsah.mixin",
+  "package": "net.cjsah.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],

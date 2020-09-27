@@ -1,4 +1,4 @@
-package com.github.cjsah;
+package net.cjsah;
 
 import com.mojang.brigadier.Command;
 import net.fabricmc.api.ModInitializer;
@@ -15,7 +15,7 @@ public class CsMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		CommandRegistry.INSTANCE.register(false, (dispatcher) -> dispatcher.register(
-				CommandManager.literal("c").requires(source -> source.hasPermissionLevel(2))
+				CommandManager.literal("c").requires(source -> source.hasPermissionLevel(1))
 						.executes(c -> {
 							changeMode(c, GameMode.SPECTATOR);
 							return Command.SINGLE_SUCCESS;

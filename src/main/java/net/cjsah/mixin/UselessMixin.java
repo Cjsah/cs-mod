@@ -1,4 +1,4 @@
-package com.github.cjsah.mixin;
+package net.cjsah.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
