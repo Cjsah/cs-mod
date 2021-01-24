@@ -3,14 +3,15 @@
   "id": "cs",
   "version": "${version}",
 
-  "name": "Gamemode Mod",
-  "description": "Change your gamemode",
+  "name": "C and S Mod",
+  "description": "You can use /c or /s change your game mode",
   "authors": [
     "Cjsah"
   ],
   "contact": {
     "homepage": "https://github.com/Cjsah/",
-    "sources": "https://github.com/Cjsah/gamemode"
+    "sources": "https://github.com/Cjsah/gamemode",
+    "issues": "https://github.com/Cjsah/gamemode/issues"
   },
 
   "license": "GPL-3.0",
@@ -22,14 +23,12 @@
       "net.cjsah.CsMod"
     ]
   },
-  "mixins": [
-    "cs.mixins.json"
-  ],
+  "mixins": [],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": ">=1.16"
   },
   "suggests": {
     "flamingo": "*"
