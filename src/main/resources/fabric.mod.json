@@ -20,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.cjsah.CsMod"
+      "net.cjsah.csmod.CsMod"
     ]
   },
   "mixins": [],

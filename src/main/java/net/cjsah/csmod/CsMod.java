@@ -1,4 +1,4 @@
-package net.cjsah;
+package net.cjsah.csmod;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
